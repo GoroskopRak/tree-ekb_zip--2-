@@ -1,19 +1,22 @@
-import React, {Component} from 'react';
-import FormHeader from '../form-header';
-import Header from '../header';
-import Main from '../main';
-import Footer from '../footer';
-import './app.css';
+import React, { Component } from 'react';
+import Header from '../Header';
+import Main from '../Main';
+import Footer from '../Footer';
+import './App.css';
 
-export default class App extends Component{
-  render(){
-    return(
-      <div className="page">
-      <Header />
-      <FormHeader />     
-      <Main />
-      <Footer />
-    </div>
-    )
-  }
+export default class App extends Component {
+    componentDidMount() {
+        if (document.querySelector(".page").clientHeight < document.documentElement.clientHeight) {
+            document.querySelector(".page").style.height = document.documentElement.clientHeight + "px";
+        }
+    }
+    render() {
+        return ( 
+        <div className = "page" >
+            <Header />
+            <Main />
+            <Footer />
+            </div>
+        )
+    }
 }

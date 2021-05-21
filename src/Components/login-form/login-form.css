@@ -1,4 +1,3 @@
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 * {
   box-sizing: border-box;
   font-family: "Recursive", sans-serif;
@@ -12,6 +11,14 @@
   padding: 10% 0;
   padding-bottom: 0;
 }
+
+.login-container {
+  -webkit-box-shadow: 0px 0px 15px -5px rgba(34, 60, 80, 0.57);
+  -moz-box-shadow: 0px 0px 15px -5px rgba(34, 60, 80, 0.57);
+  box-shadow: 0px 0px 15px -5px rgba(34, 60, 80, 0.57);
+  background-color: white;
+}
+
 .login-form input {
   box-sizing: border-box;
   font-weight: 500;
@@ -22,10 +29,12 @@
   margin-bottom: 15px;
   padding: 0px 24px;
 }
+
 .login-form input:focus {
   outline: none;
   border: 2px solid rgb(104, 103, 103);
 }
+
 .login-form button {
   box-sizing: border-box;
   font-weight: 500;
@@ -35,20 +44,23 @@
   border: none;
   color: white;
   text-transform: uppercase;
-  background-color: #50802C;
+  background-color: #50802c;
   cursor: pointer;
   margin: 15px 0px;
 }
-.login-form button:hover, 
-.login-form button:active{
+
+.login-form button:hover,
+.login-form button:active {
   background-color: #4c7929;
 }
+
 .login-form .login-message {
   color: lightgray;
   text-align: center;
   margin: 0;
   font-size: 14px;
 }
+
 .login-form .flex {
   display: flex;
   justify-content: space-between;
@@ -61,15 +73,18 @@
   justify-content: center;
   white-space: nowrap;
 }
+
 .flex-register p {
   font-weight: 500;
   font-size: 14px;
 }
+
 .flex-register .yellow {
-  color: #FB8F07;
+  color: #fb8f07;
 }
+
 .flex-register .yellow a {
-  color: #FB8F07;
+  color: #fb8f07;
   text-decoration: none;
   padding-left: 3px;
 }
@@ -90,17 +105,17 @@
 
 .login-checkbox {
   position: relative;
-  color: #FB8F07;
+  color: #fb8f07;
   padding-left: 30px;
   cursor: pointer;
 }
 
 .login-checkbox:hover,
 .login-checkbox:focus {
-  color: #FB8F07;
+  color: #fb8f07;
 }
 
-.login-checkbox input[type=checkbox] + .checkbox-indicator {
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
   top: -2px;
   left: 0;
@@ -109,7 +124,7 @@
   border: 2px solid #000000;
 }
 
-.login-checkbox input[type=checkbox]:checked + .checkbox-indicator::before {
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
   content: "\f00c";
   font-family: "FontAwesome";
   position: relative;
@@ -118,7 +133,7 @@
 }
 
 .restore {
-  color: #FB8F07;
+  color: #fb8f07;
   text-decoration: none;
   font-size: 14px;
 }
@@ -127,9 +142,10 @@
 .restore:focus {
   text-decoration: none;
 }
+
 .visually-hidden {
   display: none;
-} 
+}
 
 .social a {
   text-align: center;
@@ -139,42 +155,47 @@
   margin: 0 10px 10px 0;
 }
 
-.social a img{
+.social a img {
   width: 100%;
   height: 100%;
 }
 
-.animate__animated {
-  --animate-duration: 0.5s;
-}
-
-h2{
+h2 {
   display: none;
-  color: #FB8F07;
+  color: #fb8f07;
   font-size: 20px;
   text-align: center;
   padding: 30px 0px;
 }
-section{
+
+.login-container {
   display: flex;
 }
-.login-aside{
+
+.login-aside {
   display: none;
   flex-basis: 50%;
-  background-color: #4F802C;  
+  background-color: #4f802c;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
-.login-aside h2{
- color: white;
- font-size: 25px;
+
+.login-aside h2 {
+  color: white;
+  font-size: 25px;
 }
-.login-aside p{
+
+.login-aside p {
   padding: 10px 0px;
 }
-.login-aside .link-register{
+.flex-social{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.login-aside .link-register {
   width: 200px;
   height: 40px;
   text-align: center;
@@ -187,35 +208,53 @@ section{
   border-radius: 5px;
   margin: 10px 0px;
 }
-.login-aside .link-register:hover, 
-.login-aside .link-register:active{
+
+.login-aside .link-register:hover,
+.login-aside .link-register:active {
   background-color: white;
-  color: #4F802C;
+  color: #4f802c;
   transition: ease-in 0.15s;
 }
-@media screen and (min-width: 768px){
-  section{
-    height: 500px;
+.login-message{
+  height: 40px;
+  padding: 10px 0px;
+}
+.login-message p{
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .login-container {
+    height: 550px;
   }
-  h2{
+
+  h2 {
     display: inline;
   }
-  .login-aside{
+
+  .login-aside {
     display: flex;
   }
-  .login-form{
+
+  .login-form {
     flex-basis: 50%;
     padding: 0px 40px;
   }
-  .privacy-terms{
+
+  .privacy-terms {
     display: none;
   }
-  .animate__animated{
-    --animate-duration: 0s;
+}
+
+@media screen and (min-width: 1024px) {
+  .login-container {
+    width: 80%;
+    margin: 0 auto;
   }
 }
-@media screen and (min-width: 1800px) {
-	section {
-		height: 90%;
-	}
+
+@media screen and (min-width: 1440px) {
+  .login-container {
+    width: 1000px;
+    margin: 0 auto;
+  }
 }
